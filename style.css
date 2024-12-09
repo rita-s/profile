@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --color-background: #0c0333;
+    --color-background-overlay: rgba(12,3,51, 0.3);
+    --color-primary: #c9bfe6;
+    --color-accent: #8656ef;
+    --color-text: #a699cc;
+    --color-white: #ffffff;
+
+    --font-primary: 'Poppins', sans-serif;
+    --font-heading: 'Inter', sans-serif;
+    --font-cta: 'Mulish', sans-serif;
+
+    --text-size-small: 15px;
+    --text-size-medium: 22px;
+    --text-size-large: 50px;
+
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 40px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-primary), serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-medium);
+}
+
+header {
+    text-align: center;
+    padding: var(--spacing-large) 0;
+    background-color: rgba(12,3,51, 0.5);
+}
+
+header h1 {
+    color: var(--color-primary);
+    font-family: var(--font-heading), serif;
+    font-size: var(--text-size-large);
+    line-height: 0.75;
+    margin-bottom: var(--spacing-medium);
+}
+
+header h2 {
+    font-family: var(--font-heading), serif;
+    font-size: var(--text-size-medium);
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--color-white);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-large);
+    padding: var(--spacing-large) var(--spacing-medium);
+}
+
+#profile-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(134, 86, 239, 0.1);
+    padding: var(--spacing-large);
+    border-radius: 15px;
+}
+
+#profile-intro img {
+    border-radius: 50%;
+    width: 200px;
+    margin-bottom: var(--spacing-medium);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 12px var(--color-white);
+}
+
+#profile-intro img:hover {
+    transform: scale(1.1);
+}
+
+#profile-intro p {
+    font-size: var(--text-size-small);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-medium);
+    max-width: 600px;
+}
+
+.cta-button {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 0.07rem;
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    padding: 12px 24px;
+    font-family: var(--font-cta), serif;
+    transition: color 0.5s, border-color 0.5s;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+#experience {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-medium);
+    justify-content: center;
+}
+
+#experience article {
+    flex: 0 0 24%;
+    background-color: rgba(134, 86, 239, 0.1);
+    padding: var(--spacing-medium);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+#experience article:hover {
+    transform: translateY(-10px);
+}
+
+#experience h3 {
+    font-family: var(--font-heading), serif;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-small);
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: var(--spacing-small);
+}
+
+#experience p {
+    font-size: var(--text-size-small);
+    color: var(--color-text);
+}
+
+#social-media {
+    text-align: center;
+    background-color: rgba(134, 86, 239, 0.1);
+    padding: var(--spacing-large);
+    border-radius: 15px;
+}
+
+#social-media h2 {
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-medium);
+}
+
+#social-media ul {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-medium);
+    list-style: none;
+}
+
+#social-media a {
+    color: var(--color-accent);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+    transition: color 0.5s;
+    font-size: var(--text-size-small);
+}
+
+#social-media a:hover {
+    color: var(--color-primary);
+}
+
+footer {
+    text-align: center;
+    padding: var(--spacing-medium);
+    background-color: rgba(12,3,51, 0.5);
+    color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+    #experience {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #experience article {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    #social-media ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
